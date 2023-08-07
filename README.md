@@ -17,17 +17,31 @@
   docker compose up
   ```
 
-- Then await a few seconds and check the 2 urls below (elastic and kibana):
+- Then await a few seconds and check the 2 urls below:
   - http://localhost:9200/
   - http://localhost:5601/
  
 - You must see these two windows:
   - Elastic response:
+    ![elastic response](assets/local9200.png "Elastic Response")
   - ---
-  - Kibana Interface:
+  - Elastic Interface:
+    ![elastic interface](assets/elastic_home.png "Elastic Interface")
   - ---
 
 - So now your environment is setted up and ready to receive loggings from your Python application!
+---
+
+## Working with Data Views and Indexes:
+
+- Creating a Data View based in an index pattern:
+    ![Creating Data View](assets/creating_dataView.png "Creating Data View")
+
+    ![Creating Data View](assets/creating_dataView_2.png "Creating Data View")
+
+- Check your new data view and associated indexes!
+    ![Loggings Screen](assets/logging_screen.png "Logging Screen")
+
 ---
 
 ## Sending Loggings to Kibana
@@ -69,16 +83,15 @@
 - Your loggings also going to be writen in console.
 
 - Local loggings (Console):
+    ![local loggings](assets/console_logging.png "Local Loggings")
 - ---
-- Kibana loggings:
+- Elastic loggings:
+    ![elastic loggings](assets/elastic_logging_1.png "Elastic Loggings")
+    ![elastic loggings](assets/elastic_logging_2.png "Elastic Loggings")
 - ---
 
 ---
 
-## Working with Data Views and Indexes:
-
-
----
 ## License
 
 - Licensed under [license]()
