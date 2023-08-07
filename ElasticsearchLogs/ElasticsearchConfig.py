@@ -20,6 +20,9 @@ class ElasticsearchConfig:
 
         self.logger = str(IPAddr) + "-" + str(hostname)
         self.es = elasticsearch.Elasticsearch(hosts=[f"http://{host}:{port}"])
+        
+        if index == DEFAULT_INDEX:
+            self.create_current_date_index(index)
     
     def default_mapping(self):
         return {

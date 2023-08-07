@@ -1,23 +1,15 @@
-import time
-import logging
-import ecs_logging
-import elasticsearch
-import kibana
+import uuid
+import ElasticsearchLogs.ElasticsearchLogging as esl
 
-es = elasticsearch.Elasticsearch(hosts=["http://localhost:9200"])
-
-idx_send = es.index(
-    index="test-index",
-    id=2,
-    document={"TESTE": "data", "timestamp": time.time()}
+# Create a logger
+logger = esl.ElasticsearchLogging(
+    host="localhost",
+    port=9200
 )
 
-get = es.get(
-    index="test-index",
-    id=2,
-)
+logger.info("Hello World!", uuid.uuid4())
 
-print(idx_send)
-print(get)
-
-
+try:
+    res = 1 / 0
+except Exception as e:
+    logger.error("Error", uuid.uuid4(), e)
