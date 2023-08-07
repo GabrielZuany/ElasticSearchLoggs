@@ -32,6 +32,17 @@
 
 ## Sending Loggings to Kibana
 
+- Create and activate the Virtual Environment:
+    ```Shell
+    python -m venv .venv
+    .venv/Scripts/Activate.ps1
+    ```
+
+- Install the requirements:
+    ```Shell
+    pip install -r requirements.txt
+    ```
+
 - Import the ElasticSearchLogging class to your source code and create an object to manipulate loggings:
   ```Python
   import ElasticsearchLogs.ElasticsearchLogging as esl
@@ -39,6 +50,7 @@
   logging_sender = esl.ElasticsearchLogging(
     host="localhost",
     port=9200
+    index=DEFAULT_INDEX
   )
   ```
 
