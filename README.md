@@ -94,7 +94,7 @@
 
 ## License
 
-- Licensed under [license]()
+- Licensed under the [MIT License](https://mit-license.org/)
 ---
 
 ### Final Considerations
