@@ -1,4 +1,4 @@
-# Elastichsearch Logging Sender
+# Elastichsearch Log Sender
 
 ---
 
