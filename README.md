@@ -40,11 +40,11 @@
     ![Creating Data View](assets/creating_dataView_2.png "Creating Data View")
 
 - Check your new data view and associated indexes!
-    ![Loggings Screen](assets/logging_screen.png "Logging Screen")
+    ![Logs Screen](assets/logging_screen.png "Logging Screen")
 
 ---
 
-## Sending Loggings to Kibana
+## Sending Logs to Kibana
 
 - Create and activate the Virtual Environment:
     ```Shell
@@ -57,7 +57,7 @@
     pip install -r requirements.txt
     ```
 
-- Import the ElasticSearchLogging class to your source code and create an object to manipulate loggings:
+- Import the ElasticSearchLogging class to your source code and create an object to manipulate logs:
   ```Python
   import ElasticsearchLogs.ElasticsearchLogging as esl
 
@@ -80,14 +80,14 @@
         logger.error(message="Error", user_id=uuid.uuid4(), exception=e)
     ```
 
-- Your loggings also going to be writen in console.
+- Your logs also going to be writen in console.
 
-- Local loggings (Console):
-    ![local loggings](assets/console_logging.png "Local Loggings")
+- Local logs (Console):
+    ![local logs](assets/console_logging.png "Local Loggings")
 - ---
-- Elastic loggings:
-    ![elastic loggings](assets/elastic_logging_1.png "Elastic Loggings")
-    ![elastic loggings](assets/elastic_logging_2.png "Elastic Loggings")
+- Elastic logs:
+    ![elastic logs](assets/elastic_logging_1.png "Elastic Loggings")
+    ![elastic logs](assets/elastic_logging_2.png "Elastic Loggings")
 - ---
 
 ---
